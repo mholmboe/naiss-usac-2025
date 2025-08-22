@@ -2,22 +2,196 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NAISS–USAC Umeå Meeting • 26–27 Aug 2025</title>
+  <meta name="description" content="Local NAISS–USAC meeting at Umeå University, 26–27 August 2025. Program, abstracts, venue, Zoom, and workshop info." />
   <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; max-width: 780px; margin: 3rem auto; padding: 0 1rem; }
-    h1 { margin: 0 0 .25rem; }
-    .sub { color:#555; margin: 0 0 2rem; }
-    a.button { display:inline-block; padding:.8rem 1rem; margin:.4rem .6rem .4rem 0; border:1px solid #e5e7eb; border-radius:12px; text-decoration:none }
+    :root {
+      --bg: #ffffff;
+      --fg: #0f172a;
+      --muted: #475569;
+      --card: #f8fafc;
+      --border: #e5e7eb;
+      --accent: #0ea5e9;
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0; background: var(--bg); color: var(--fg);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.5;
+    }
+    .wrap { max-width: 920px; margin: 3rem auto; padding: 0 1rem; }
+    header { display: grid; gap: .5rem; }
+    h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); margin: 0; }
+    .sub { color: var(--muted); margin-top: .1rem; }
+    .chips { margin-top: .75rem; display: flex; flex-wrap: wrap; gap: .5rem; }
+    .chip { display: inline-flex; align-items: center; gap: .5rem; padding: .55rem .8rem; border: 1px solid var(--border); background: var(--card); border-radius: 999px; text-decoration: none; color: inherit; }
+    .chip:hover { border-color: var(--accent); }
+
+    nav { position: sticky; top: 0; background: color-mix(in oklab, var(--bg), #fff 70%); border-bottom: 1px solid var(--border); backdrop-filter: blur(6px); z-index: 2; }
+    .navwrap { max-width: 920px; margin: 0 auto; padding: .6rem 1rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+    .navwrap a { text-decoration: none; color: var(--fg); padding: .4rem .6rem; border-radius: 10px; }
+    .navwrap a:hover { background: var(--card); }
+
+    section { margin: 3rem 0; }
+    section h2 { font-size: clamp(1.4rem, 3vw, 1.8rem); margin: 0 0 .75rem; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 1rem; }
+    .grid { display: grid; gap: 1rem; }
+    @media (min-width: 720px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
+
+    .btns { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: .8rem; }
+    .btn { display: inline-block; padding: .8rem 1rem; border: 1px solid var(--border); border-radius: 12px; text-decoration: none; }
+    .btn:hover { border-color: var(--accent); }
+
+    .kv { display: grid; gap: .25rem; }
+    .kv .k { color: var(--muted); font-size: .95rem; }
+
+    /* Program table */
+    .program { width: 100%; border-collapse: collapse; }
+    .program th, .program td { padding: .55rem .6rem; vertical-align: top; }
+    .program tr { border-bottom: 1px dashed var(--border); }
+    .program th.time { width: 7.5rem; text-align: left; color: var(--muted); font-weight: 600; }
+    .program td.talk { }
+    .program .speaker { color: var(--muted); }
+    .day { font-weight: 700; margin: 1.5rem 0 .5rem; }
+
+    footer { border-top: 1px solid var(--border); padding: 2rem 0; color: var(--muted); font-size: .95rem; }
+    .tiny { font-size: .9rem; color: var(--muted); }
+    .warning { background: #fff7ed; border: 1px solid #fed7aa; color: #b45309; padding: .75rem 1rem; border-radius: 12px; }
+    .todo { color: #b91c1c; font-weight: 600; }
   </style>
 </head>
 <body>
-  <h1>NAISS–USAC Meeting (Umeå)</h1>
-  <p class="sub">26–27 August 2025</p>
-  <p>Materials:</p>
-  <p>
-    <a class="button" href="Program_NAISS-USAC_Umea_Aug26-27.pdf" target="_blank" rel="noopener">📄 Program (PDF)</a>
-    <a class="button" href="Abstracts_NAISS-USAC_Umea_Aug26-27.pdf" target="_blank" rel="noopener">📄 Abstracts (PDF)</a>
-  </p>
+  <div class="wrap">
+    <header>
+      <h1>NAISS–USAC Meeting (Umeå)</h1>
+      <div class="sub">26–27 August 2025 • Lunch-to-lunch</div>
+      <div class="chips">
+        <a class="chip" href="#materials">📎 Materials</a>
+        <a class="chip" href="#venue">📍 Venue & Travel</a>
+        <a class="chip" href="#program">🗓️ Program</a>
+        <a class="chip" href="#workshop">💻 Workshop</a>
+        <a class="chip" href="#zoom">🟢 Zoom</a>
+      </div>
+    </header>
+  </div>
+
+  <nav>
+    <div class="navwrap">
+      <a href="#materials">Materials</a>
+      <a href="#venue">Venue</a>
+      <a href="#program">Program</a>
+      <a href="#workshop">Workshop</a>
+      <a href="#zoom">Zoom</a>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <section id="materials">
+      <h2>Materials</h2>
+      <div class="card">
+        <p>Download the PDFs here (same filenames as in the repository):</p>
+        <div class="btns">
+          <a class="btn" href="Program_NAISS-USAC_Umea_Aug26-27.pdf" target="_blank" rel="noopener">📄 Program (PDF)</a>
+          <a class="btn" href="Abstracts_NAISS-USAC_Umea_Aug26-27.pdf" target="_blank" rel="noopener">📄 Abstracts (PDF)</a>
+        </div>
+        <p class="tiny">Tip: If these don’t open, ensure the PDFs are in the repo root with these exact filenames.</p>
+      </div>
+    </section>
+
+    <section id="venue">
+      <h2>Venue & Travel</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="kv">
+            <div class="k">Where</div>
+            <div><strong>Stora Fokusrummet</strong>, KBC Building (floor 3), Linnaeus väg 6, Umeå University</div>
+          </div>
+          <div class="kv" style="margin-top:.6rem;">
+            <div class="k">Campus map</div>
+            <div>
+              KBC building is <strong>#24</strong> on the campus map.
+              <!-- Replace the # with your actual campus map URL -->
+              <a href="#" aria-label="Campus map placeholder">(map link)</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="kv">
+            <div class="k">How to get there</div>
+            <ul style="margin:.25rem 0 .25rem 1.1rem;">
+              <li>Walk ~30 minutes from city center</li>
+              <li>Taxi to Umeå University campus, KBC building</li>
+              <li>Bus via the <em>Ultra</em> bus app</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="program">
+      <h2>Program</h2>
+
+      <div class="day">Day 1 — Tue, Aug 26</div>
+      <table class="program" aria-label="Program Day 1">
+        <tbody>
+          <tr><th class="time">12:00–13:00</th><td class="talk">Lunch at Restaurant Hjortron, Universum — <span class="speaker"><!-- Replace with actual signup URL if available --> <a href="#">sign up here</a></span></td></tr>
+          <tr><th class="time">13:00–13:20</th><td class="talk">USAC – what do we do? — <span class="speaker">Michael Holmboe</span></td></tr>
+          <tr><th class="time">13:20–13:40</th><td class="talk">NAISS – current and future capabilities — <span class="speaker">Erik Lindahl</span></td></tr>
+          <tr><th class="time">13:40–14:00</th><td class="talk">1. SLU Bioinformatics Infrastructure and UPSC bioinformatics platform as NAISS power users — <span class="speaker">Nicolas Delhomme</span></td></tr>
+          <tr><th class="time">14:00–14:20</th><td class="talk">2. Oxymoron? When HPC Drives Evolutionary Biology into the Real World — <span class="speaker">Thanat Chookajorn</span></td></tr>
+          <tr><th class="time">14:20–14:30</th><td class="talk">Transition / setup buffer</td></tr>
+          <tr><th class="time">14:30–15:00</th><td class="talk">Coffee break</td></tr>
+          <tr><th class="time">15:00–15:20</th><td class="talk">3. HPC for 3D protein structure determination in Cryo-Electron Microscopy — <span class="speaker">Suresh Banjara</span></td></tr>
+          <tr><th class="time">15:20–15:40</th><td class="talk">4. Unveiling a Crystal-Invisible Active Enzyme State with HPC-Powered Molecular Dynamics Simulations — <span class="speaker">Mitul Srivastava</span></td></tr>
+          <tr><th class="time">15:40–16:00</th><td class="talk">5. Capturing Adenylate Kinase Dynamics with TRXSS and Ensemble Modelling — <span class="speaker">Konstantinos Magkakis</span></td></tr>
+          <tr><th class="time">16:00–16:20</th><td class="talk">6. Molecular dynamics simulations of Calcium-Transporting P-type ATPases in membranes with different phospholipid compositions — <span class="speaker">Fatemeh Sabzian</span></td></tr>
+          <tr><th class="time">18:30~</th><td class="talk">Dinner for pre-registered participants (details to follow)</td></tr>
+        </tbody>
+      </table>
+
+      <div class="day">Day 2 — Wed, Aug 27</div>
+      <table class="program" aria-label="Program Day 2">
+        <tbody>
+          <tr><th class="time">08:45–09:00</th><td class="talk">Coffee on arrival</td></tr>
+          <tr><th class="time">09:00–09:20</th><td class="talk">7. Swedish Biodiversity in Time and Space (SweBITS) — <span class="speaker">Johan Stenberg</span></td></tr>
+          <tr><th class="time">09:20–09:40</th><td class="talk">8. Scalable single-cell metagenomic analysis with Bascet and Zorn — <span class="speaker">Johan Henriksson</span></td></tr>
+          <tr><th class="time">09:40–10:00</th><td class="talk">9. The energy transfer from the solar wind to the Martian ionosphere — <span class="speaker">Xiao‑Dong Wang</span></td></tr>
+          <tr><th class="time">10:00–10:30</th><td class="talk">Coffee break</td></tr>
+          <tr><th class="time">10:30–10:50</th><td class="talk">10. Disease Aware Parameter‑Efficient Fine Tuning of Vision Language Models — <span class="speaker">Filippo Ruffini</span></td></tr>
+          <tr><th class="time">10:50–11:10</th><td class="talk">11. Solving Partial Differential Equations on an HPC — <span class="speaker">Balaje Kalyanaraman</span></td></tr>
+          <tr><th class="time">11:10–11:30</th><td class="talk">12. Mixed and lower precision algorithmic design for CFD and other applications — <span class="speaker">Roman Iakymchuk</span> <span class="speaker">(Zoom presentation)</span></td></tr>
+          <tr><th class="time">11:30–12:00</th><td class="talk">Discussion &amp; Wrap‑up</td></tr>
+          <tr><th class="time">12:00–13:00</th><td class="talk">Lunch at Restaurant Hjortron, Universum — <span class="speaker"><a href="#">sign up here</a></span></td></tr>
+          <tr><th class="time">13:00–16:00</th><td class="talk">Hands‑on Workshop organized by HPC2N — <span class="speaker">Brigitte Brydsö</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="workshop">
+      <h2>Workshop (Wed, Aug 27, 13:00–16:00)</h2>
+      <div class="card">
+        <p class="warning"><strong>Registration:</strong> <!-- Replace the # with the real registration URL --> <a class="todo" href="#">Use this link</a>. Contact <a href="mailto:bbrydsoe@hpc2n.umu.se">bbrydsoe@hpc2n.umu.se</a> for more info.</p>
+        <ul>
+          <li><strong>Part 1:</strong> Advanced SLURM Usage — Tips &amp; tricks for efficient job scheduling</li>
+          <li><strong>Part 2:</strong> Module management — Best practices for different software environments</li>
+        </ul>
+        <p class="tiny">Includes a coffee break around 14:30.</p>
+      </div>
+    </section>
+
+    <section id="zoom">
+      <h2>Zoom</h2>
+      <div class="card">
+        <p>Join the meeting via Zoom (for remote/Zoom talks):<br>
+        <a href="https://umu.zoom.us/j/62542716750" target="_blank" rel="noopener">umu.zoom.us/j/62542716750</a></p>
+      </div>
+    </section>
+
+    <footer>
+      <div>Questions? Contact the organizers.</div>
+      <div class="tiny">This page is served via GitHub Pages from the <code>mholmboe/naiss-usac-2025</code> repository.</div>
+    </footer>
+  </div>
 </body>
 </html>
